@@ -1,0 +1,55 @@
+body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border: 1px red solid;
+  background-color: darkblue;
+  color: aliceblue;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  border: aliceblue 5px ridge;
+  row-gap: 10px;
+  width: 50vw;
+}
+
+.nameBox {
+  width: 25vw;
+  margin-left: 10px;
+  margin-top: 10px;
+}
+#name {
+  margin-left: 1rem;
+  width: 16vw;
+}
+.messageBox {
+  display: flex;
+  flex-direction: column;
+  width: 45vw;
+  margin-left: 10px;
+}
+#app {
+  margin-top: 30px;
+  width: 50vw;
+}
+.likeBox {
+  margin-left: 10px;
+}
+#sendbtn {
+  margin-left: 10px;
+  margin-bottom: 10px;
+}
+
+#app {
+  width: 90vw;
+  border: ridge blueviolet 5px;
+}
+@media (max-width: 850px) {
+  #name {
+    margin-left: auto;
+    width: 45vw;
+  }
+}
