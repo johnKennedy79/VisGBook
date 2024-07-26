@@ -33,14 +33,11 @@ async function messagehistory() {
     delbtn.textContent = "delete";
     messagehistory.appendChild(delbtn);
     delbtn.addEventListener("click", async () => {
-      await fetch(`http://localhost:8080/messages/?id=`req.body.id, {
+      await fetch(`http://localhost:8080/messages/?id=${req.body.id}`, {
         method: "DELETE",
       });
       console.log(id);
     });
-
-    // delbtn.addEventListener("click", function () {
-    //   delmessage(histdata[i].id);
   }
 }
 

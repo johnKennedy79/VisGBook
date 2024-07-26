@@ -32,7 +32,7 @@ app.post("/messages", (req, res) => {
 });
 
 app.delete("/messages", (req, res) => {
-  db.query(`DELETE * FROM messages WHERE ID = req.body.id `);
+  db.query(`DELETE * FROM messages WHERE id = req.body.id `);
 });
 
 //add a delete button
