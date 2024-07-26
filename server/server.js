@@ -23,8 +23,19 @@ app.get("/messages", async function (req, res) {
 app.post("/messages", (req, res) => {
   console.log(req.body);
   res.json("form submited");
-  db.query(`INSERT INTO messages (name, message, emoji) VALUES ${REQ.BODY}`);
+  //add form message to the database
+  db.query(`INSERT INTO messages (name, message, emoji) VALUES ($1,$2,$3)`, [
+    req.body.name,
+    req.body.message,
+    req.body.emoji,
+  ]);
 });
+
+app.delete("/messages", (req, res) => {
+  db.query(`DELETE * FROM messages WHERE ID = req.body.id `);
+});
+
+//add a delete button
 
 app.listen("8080", () => {
   console.log("listening to port 8080");

@@ -30,4 +30,8 @@
 
 1. created the form in HTML
 2. styled the form
-3. wrote the client javaScript to collect the info from the form, turn it into json and post it to the server
+3. wrote the client api post rout to collect the info from the form, turn it into json and post it to the server
+   4.created a database to store messages and a seed file
+4. created an api get messages from the database and display them on the screen
+   added a database query to add new messages from the form to the database and refresh the page to clear the form and show the updated message history
+5. add delete button
