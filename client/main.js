@@ -29,16 +29,14 @@ async function messagehistory() {
       `<p>${histdata[i].name}</p>` +
       `<p>${histdata[i].message}</p>` +
       `<p>${histdata[i].emoji}</p>`;
-    const delbtn = document.createElement("button");
-    delbtn.textContent = "delete";
-    messagehistory.appendChild(delbtn);
-    delbtn.addEventListener("click", async () => {
-      await fetch(`http://localhost:8080/messages/?id=${req.body.id}`, {
-        method: "DELETE",
-      });
-      console.log(id);
-    });
+    // const delbtn = document.createElement("button");
+    // delbtn.textContent = "delete";
+    // messagehistory.appendChild(delbtn);
+    // delbtn.addEventListener("click", async () => {
+    //   await fetch(`http://localhost:8080/messages/?id=${req.body.id}`, {
+    //     method: "DELETE",
   }
+  // console.log(id);
 }
 
 messagehistory();
