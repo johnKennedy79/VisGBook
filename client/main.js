@@ -7,7 +7,7 @@ form.addEventListener("submit", async function (event) {
   const formValues = Object.fromEntries(formData);
   //   console.log(formValues); pass
   //   make an api call when the form is subited
-  const res = await fetch("http://localhost:8080/messages", {
+  const res = await fetch("https://visgbook.onrender.com/messages", {
     method: "POST",
     headers: { "Content-Type": "application/json" },
     body: JSON.stringify(formValues),
@@ -21,7 +21,7 @@ form.addEventListener("submit", async function (event) {
 
 // calling database and displaying database on client
 async function messagehistory() {
-  const messages = await fetch("http://localhost:8080/messages");
+  const messages = await fetch("https://visgbook.onrender.com/messages");
   const histdata = await messages.json();
   const messagehistory = document.getElementById("app");
   for (let i = 0; i < histdata.length; i++) {
